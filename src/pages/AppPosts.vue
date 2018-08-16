@@ -5,7 +5,10 @@
             <router-link :to="{ name: 'view', params: { id: post.id }}" class="btn btn-default">
                 <h2 style="padding-left: 5%">{{ post.title }}</h2>
             </router-link>
-            <p style="padding-left: 5%">{{ post.text }}</p><hr>   
+            <router-link :to="{ name: 'edit-post', params: { id: post.id } }" class="btn btn-default">
+                <button type="button">Edit</button>
+            </router-link> 
+            <p style="padding-left: 5%">{{ post.text }}</p><hr>  
         </div>
     </div>
 </template>
