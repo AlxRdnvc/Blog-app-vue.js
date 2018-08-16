@@ -3,13 +3,14 @@
         <form @submit.prevent>
             <div class="form-group">
                 <label for="title">Title</label>
-                <input v-model="newPost.title" type="text" class="form-control" id="title" placeholder="Title...">
+                <input v-model="newPost.title" type="text" class="form-control" id="title" placeholder="Title..." required>
             </div>
             <div class="form-group">
                 <label for="text">Text</label>
-                <input v-model="newPost.text" type="text" class="form-control" id="text" placeholder="Text...">
+                <input v-model="newPost.text" type="text" maxlength="300" class="form-control" id="text" placeholder="Text..." required>
             </div>
             <button @click="addNewPost()" type="submit">Add post</button>
+            <input type="reset" value="Reset" />
         </form>
     </div>
 </template>
