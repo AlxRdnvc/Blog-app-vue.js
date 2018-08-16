@@ -1,9 +1,11 @@
 <template>
     <div>
         <h1 style="text-align: center;">Posts</h1><br><br>
-        <div v-for="(post, index) in posts" :key="index"> 
-            <h2 style="padding-left: 5%">{{ post.title }}</h2><br>
-            <p style="padding-left: 5%">{{ post.text }}</p><hr>
+        <div v-for="post in posts" :key="post.id"> 
+            <router-link :to="{ name: 'view', params: { id: post.id }}" class="btn btn-default">
+                <h2 style="padding-left: 5%">{{ post.title }}</h2>
+            </router-link>
+            <p style="padding-left: 5%">{{ post.text }}</p><hr>   
         </div>
     </div>
 </template>
