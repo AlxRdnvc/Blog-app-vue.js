@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 import AppPosts from './pages/AppPosts'
 import SinglePost from './components/SinglePost'
 import AddPost from './pages/AddPost'
+import AddComment from './components/AddComment';
 
 Vue.use(VueRouter)
 

@@ -9,6 +9,7 @@
                 <button type="button">Edit</button>
             </router-link>
             <button class="btn btn-danger" @click="deletePost(post.id, index)">Delete</button>
+            <p class="badge">num of comments: {{ post.comments.length }}</p>
             <p style="padding-left: 5%">{{ post.text }}</p><hr>  
         </div>
     </div>
