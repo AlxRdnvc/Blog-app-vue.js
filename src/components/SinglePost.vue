@@ -5,7 +5,7 @@
         <AddComment :post="post" /> 
         <div class="comment" v-for="(comment, index) in post.comments" :key="index">
                 <p>{{comment.text}}</p>
-                <p>{{comment.createdAt}}</p>
+                <p>{{comment.createdAt | diffForHumans }}</p>
         </div>
     </div>
 </template>
@@ -14,9 +14,11 @@
 
 import { posts } from '../services/posts.js'
 import AddComment from '../components/AddComment.vue'
+import {DateMixin} from '../services/DateMixin.js'
 
 export default {
     name: 'posts',
+    mixins: [DateMixin],
     components: {
         AddComment
     },
